@@ -25,6 +25,7 @@ TABLE OF CONTENTS
     # FOOTER
 
 # UI COMPONENTS
+    #CARDS
     # BUTTONS
 
 # ANIMATION
@@ -48,6 +49,8 @@ TABLE OF CONTENTS
     --color-white: #fff;
     --color-black: #000;
 
+    --color-grey-200: rgb(0 0 0 / .2);
+
     --color-light-blue: hsl(201, 52%, 84%);
 
     --color-pink: hsl(322, 100%, 88%);
@@ -62,13 +65,32 @@ TABLE OF CONTENTS
 
 
     /* SET SEMANTIC COLORS */
-    --color-body-background: var(--color-pink);
+    --color-body-background: var(--color-white);
     --color-body-text: var(--color-purple);
     --color-body-text-dark: var(--color-purple-400);
 
     --color-primary: var(--color-pink-900);
     --color-secondary: var(--color-purple-400);
     --color-secondary-hover: var(--color-purple-900);
+
+    --color-border: var(--color-grey-200);
+
+    /* BORDER */
+    --color-border: var(--color-grey-200);
+    --border-radius: 5px;
+    --border-thickness: .5px;
+
+    /* SIZING UNITES */
+    --unit-s: 1em;
+    --unit-m: 2em;
+    --unit-l: 3em;
+    --unit-xl: 4em;
+    --unit-xxl: 5em;
+    --unit-gutter: 1.5em;
+
+    /* GLOBAL TYPOGRAPHY */
+    --font-body: Helvetica, arial, sans-serif;
+    --font-headings: Georgia, Times, serif;
 }
 
 /* SET GLOBAL COLORS */
@@ -93,4 +115,33 @@ a{
 
 a:hover{
     color: var(--color-secondary-hover);
+}
+
+/* GLOBAL TYPOGRAPHY */
+body{
+    font-family: var(--font-body);
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--font-headings);
+}
+
+/* UI COMPONENTS */
+
+/* CARDS */
+
+.card {
+    border: var(--color-border) 1px solid;
+    display: inline-block;
+    padding: var(--unit-s);
+    border-radius: 5px;
+}
+
+.color-swatch {
+    --_swatch-color: grey;
+    background-color: var(--_swatch-color);
+    width: 150px;
+    height: 150px;
 }
