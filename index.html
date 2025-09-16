@@ -13,289 +13,406 @@
 </head>
 <body>
 
-<div class="container">
+<header class="site-header">
+    <div class="logo">
+        <h1><a href="index.html">Simple Base</a></h1>
+    </div>
+</header>
 
-    <h1>Simple Base Docs</h1>
-    <h2>Boilerplate</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nulla ipsum, mattis in purus vel, tincidunt porttitor massa. Nulla convallis dui eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec mollis libero sed velit vulputate, sit amet pharetra elit tristique. Duis varius ornare ex non dignissim. Aenean congue, orci eu efficitur egestas, justo purus accumsan lacus, quis condimentum lectus metus ac orci. Morbi non neque laoreet, condimentum lectus a, euismod est. Maecenas nisi odio, viverra quis blandit quis, fermentum a nisl. Donec eu sodales enim. Fusce id interdum augue. Nam blandit eros pretium dapibus accumsan. Aenean sagittis est vitae lacus pellentesque faucibus. Ut diam urna, tempus in egestas in, eleifend vitae diam.
-    </p>
+<main class="site-main">
 
-    <hr>
-
-    <h2>CSS Variables</h2>
-
-    <h3>Colors</h3>
-
-    <h4>Darker</h4>
-
-    <div class="card">
-        <div class="color-swatch" style="--_swatch-color: hsl(322, 100%, 88%);" ></div>
-        <div class="color-info">
-            <p>Light pink<br>--color-pink</p>
+    <section class="section hero">
+        <div class="div container">
+            <h1>Simple Base Docs</h1>
         </div>
+    </section>
+
+<section>
+    <div class="container">
+        <nav>
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#boilerplate">Boilerplate</a></li>
+                <li><a href="#css-variables">CSS Variables</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#helper-classes">Helper Classes</a></li>
+                <li><a href="#grid-system">Grid System</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <div class="card">
-        <div class="color-swatch" style="--_swatch-color: hsl(262, 35%, 30%);"></div>
-        <div class="color-info">
-            <p>Purple<br>--color-purple-400</p>
-        </div>
-    </div>
+</section>
 
-    <h4>Lighter</h4>
+<section>
+    <div class="container">
 
-    <div class="card">
-        <div class="color-swatch" style="--_swatch-color: hsl(322, 100%, 90%);" ></div>
-        <div class="color-info">
-            <p>Lighter pink<br>--color-pink-400</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <div class="color-swatch" style="--_swatch-color: hsl(262, 35%, 60%);"></div>
-        <div class="color-info">
-            <p>Light Purple<br>--color-purple-100</p>
-        </div>
-    </div>
-
-    <pre><code>
-:root {
-
-    <!-- DEFINE BASE COLORS -->
-    --color-pink: hsl(322, 100%, 88%);
-    --color-pink-400: hsl(322, 100%, 90%);
-    --color-purple-400: hsl(262, 35%, 30%);
-
-    <!-- DEFINE SEMANTIC COLORS -->
-    --color-purple-900: hsl(262, 35%, 30%);
-    --color-purple-100: hsl(262, 35%, 60%);
-}
-    </code></pre>
-
-    <pre>
-        This pre has no code inside.
-    </pre>
-
-    <hr>
-
-
-    <h2>Typography</h2>
-
-    <h1>This is a heading 1.</h1>
-    <h2>This is a heading 2.</h2>
-    <h3>This is a heading 3.</h3>
-    <h4>This is a heading 4.</h4>
-
-    <p>This is a paragraph. This is <em>italic</em> text. this is <strong>bold</strong> text, and this is an <a href="#">inline link with styling.</a> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati pariatur quibusdam deleniti porro itaque iure veniam eveniet, nesciunt repellat facere?</p>
-
-    <pre><code>
-        &lt;h1&gt;This is a heading 1.&lt;/h1&gt;
-        &lt;h2&gt;This is a heading 2.&lt;/h2&gt;
-        &lt;h3&gt;This is a heading 3.&lt;/h3&gt;
-        &lt;h4&gt;This is a heading 4.&lt;/h4&gt;
+        <h2 id="boilerplate">Boilerplate</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nulla ipsum, mattis in purus vel, tincidunt porttitor massa. Nulla convallis dui eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec mollis libero sed velit vulputate, sit amet pharetra elit tristique. Duis varius ornare ex non dignissim. Aenean congue, orci eu efficitur egestas, justo purus accumsan lacus, quis condimentum lectus metus ac orci. Morbi non neque laoreet, condimentum lectus a, euismod est. Maecenas nisi odio, viverra quis blandit quis, fermentum a nisl. Donec eu sodales enim. Fusce id interdum augue. Nam blandit eros pretium dapibus accumsan. Aenean sagittis est vitae lacus pellentesque faucibus. Ut diam urna, tempus in egestas in, eleifend vitae diam.
+        </p>
     
-        &lt;p&gt;This is a paragraph. This is &lt;em&gt;italic&lt;/em&gt; text. this is &lt;strong&gt;bold&lt;/strong&gt; text, and this is an &lt;a href="#"&gt;inline link with styling.&lt;/a&gt; Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati pariatur quibusdam deleniti porro itaque iure veniam eveniet, nesciunt repellat facere?&lt;/p&gt;
-    </code></pre>
+        <h3>Simple Base Site Folder Structure</h3>
+        
+        <pre><code>
+            sitename/
+            ├── index.html
+            ├── css/
+            │   ├── style.css
+            ├── js/
+            │   ├── script.js
+            ├── img/
+            │   ├── (images go here)                 
+        </code></pre>
+    </div>
+</section>
+
 
     <hr>
 
+    <section>
+        <div class="div container">
+                    <h2 id="css-variables">CSS Variables</h2>
 
+            <h3>Colors</h3>
 
-    <h2>Media</h2>
-    <h3>Images</h3>
-    <img src="img/placeholder-2000x1000.gif" width="2000" height="1000" alt="Placeholder image">
+            <h4>Darker</h4>
+
+            <div class="card">
+                <div class="color-swatch" style="--_swatch-color: hsl(322, 100%, 88%);" ></div>
+                <div class="color-info">
+                    <p>Light pink<br>--color-pink</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="color-swatch" style="--_swatch-color: hsl(262, 35%, 30%);"></div>
+                <div class="color-info">
+                    <p>Purple<br>--color-purple-400</p>
+                </div>
+            </div>
+
+            <h4>Lighter</h4>
+
+            <div class="card">
+                <div class="color-swatch" style="--_swatch-color: hsl(322, 100%, 90%);" ></div>
+                <div class="color-info">
+                    <p>Lighter pink<br>--color-pink-400</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="color-swatch" style="--_swatch-color: hsl(262, 35%, 60%);"></div>
+                <div class="color-info">
+                    <p>Light Purple<br>--color-purple-100</p>
+                </div>
+            </div>
+
+            <pre><code>
+        :root {
+
+            <!-- DEFINE BASE COLORS -->
+            --color-pink: hsl(322, 100%, 88%);
+            --color-pink-400: hsl(322, 100%, 90%);
+            --color-purple-400: hsl(262, 35%, 30%);
+
+            <!-- DEFINE SEMANTIC COLORS -->
+            --color-purple-900: hsl(262, 35%, 30%);
+            --color-purple-100: hsl(262, 35%, 60%);
+        }
+            </code></pre>
+
+            <pre>
+                This pre has no code inside.
+            </pre>
+        </div>
+    </section>
 
 
     <hr>
 
+    <section>
+        <div class="div container">
+            <h2 id="typography">Typography</h2>
 
+            <h1>This is a heading 1.</h1>
+            <h2>This is a heading 2.</h2>
+            <h3>This is a heading 3.</h3>
+            <h4>This is a heading 4.</h4>
 
-    <h2>Helper Classes</h2>
+            <p>This is a paragraph. This is <em>italic</em> text. this is <strong>bold</strong> text, and this is an <a href="#">inline link with styling.</a> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati pariatur quibusdam deleniti porro itaque iure veniam eveniet, nesciunt repellat facere?</p>
 
-    <h3>Easy Way to Center Text</h3>
+            <pre><code>
+                &lt;h1&gt;This is a heading 1.&lt;/h1&gt;
+                &lt;h2&gt;This is a heading 2.&lt;/h2&gt;
+                &lt;h3&gt;This is a heading 3.&lt;/h3&gt;
+                &lt;h4&gt;This is a heading 4.&lt;/h4&gt;
+            
+                &lt;p&gt;This is a paragraph. This is &lt;em&gt;italic&lt;/em&gt; text. this is &lt;strong&gt;bold&lt;/strong&gt; text, and this is an &lt;a href="#"&gt;inline link with styling.&lt;/a&gt; Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati pariatur quibusdam deleniti porro itaque iure veniam eveniet, nesciunt repellat facere?&lt;/p&gt;
+            </code></pre>
+        </div>
+    </section>
 
-    <p class="text-center">I want this text to be centered.</p>
-
-<pre><code>
-    &lt;p class="text-center"&gt;I want this text to be centered.&lt;/p&gt;
-</code></pre>
 
     <hr>
 
-    <h2>Grid System (12 column)</h2>
+    <section>
+        <div class="container">
+            <h2 id="media">Media</h2>
+            <h3>Images</h3>
+            <img src="img/placeholder-2000x1000.gif" width="2000" height="1000" alt="Placeholder image">
+        </div>
+    </section>
 
-    <div class="row demo">
-        <div class="one-half">&frac12;</div>
-        <div class="one-half">&frac12;</div>
-    </div>
 
-    <div class="row demo">
-        <div class="one-third">&frac13;</div>
-        <div class="one-third">&frac13;</div>
-        <div class="one-third">&frac13;</div>
-    </div>
+    <hr>
 
-    <div class="row demo">
-        <div class="one-third">&frac13;</div>
-        <div class="two-thirds">&frac23;</div>
-    </div>
+    <section>
+        <div class="div container">
+            <h2 id="helper-classes">Helper Classes</h2>
 
-    <div class="row demo">
-        <div class="one-fourth">&frac14;</div>
-        <div class="one-fourth">&frac14;</div>
-        <div class="one-fourth">&frac14;</div>
-        <div class="one-fourth">&frac14;</div>
-    </div>
+            <h3>Easy Way to Center Text</h3>
+        
+            <p class="text-center">I want this text to be centered.</p>
+        
+        <pre><code>
+            &lt;p class="text-center"&gt;I want this text to be centered.&lt;/p&gt;
+        </code></pre>
+        </div>
+    </section>
 
-    <div class="row demo">
-        <div class="one-fourth">&frac14;</div>
-        <div class="three-fourths">&frac34;</div>
-    </div>
 
-    <div class="row centered demo">
-        <div class="one-half centered">&frac12; .centered</div>
-    </div>
+    <hr>
 
-    <div class="row centered demo">
-        <div class="two-thirds centered">&frac23; .centered</div>
-    </div>
+    <section>
+        <div class="div container">
+            <h2 id="grid-system">Grid System (12 column)</h2>
 
-    <div class="row demo">
-        <div class="col-1">.col-1</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2">.col-2</div>
-    </div>
-    <div class="row demo">
-        <div class="col-3">.col-3</div>
-    </div>
-    <div class="row demo">
-        <div class="col-4">.col-4</div>
-    </div>
-    <div class="row demo">    
-        <div class="col-5">.col-5</div>
-    </div>
-    <div class="row demo">
-        <div class="col-6">.col-6</div>
-    </div>
-    <div class="row demo">
-        <div class="col-7">.col-7</div>
-    </div>
-    <div class="row demo">
-        <div class="col-8">.col-8</div>
-    </div>
-    <div class="row demo">
-        <div class="col-9">.col-9</div>
-    </div>
-    <div class="row demo">
-        <div class="col-10">.col-10</div>
-    </div>
-    <div class="row demo">
-        <div class="col-11">.col-11</div>
-    </div>
-    <div class="row demo">
-        <div class="col-12">.col-12</div>
-    </div>
-
-    <div class="row demo">
-        <div class="col-2 push 1">.push-1</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-2">.push-2</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-3">.push-3</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-4">.push-4</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-5">.push-5</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-6">.push-6</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-7">.push-7</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-8">.push-8</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-9">.push-9</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-10">.push-10</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-11">.push-11</div>
-    </div>
-    <div class="row demo">
-        <div class="col-2 push-12">.push-12</div>
-    </div>
+            <div class="row demo">
+                <div class="one-half">&frac12;</div>
+                <div class="one-half">&frac12;</div>
+            </div>
+        
+            <div class="row demo">
+                <div class="one-third">&frac13;</div>
+                <div class="one-third">&frac13;</div>
+                <div class="one-third">&frac13;</div>
+            </div>
+        
+            <div class="row demo">
+                <div class="one-third">&frac13;</div>
+                <div class="two-thirds">&frac23;</div>
+            </div>
+        
+            <div class="row demo">
+                <div class="one-fourth">&frac14;</div>
+                <div class="one-fourth">&frac14;</div>
+                <div class="one-fourth">&frac14;</div>
+                <div class="one-fourth">&frac14;</div>
+            </div>
+        
+            <div class="row demo">
+                <div class="one-fourth">&frac14;</div>
+                <div class="three-fourths">&frac34;</div>
+            </div>
+        
+            <div class="row centered demo">
+                <div class="one-half centered">&frac12; .centered</div>
+            </div>
+        
+            <div class="row centered demo">
+                <div class="two-thirds centered">&frac23; .centered</div>
+            </div>
+        
+            <div class="row demo">
+                <div class="col-1">.col-1</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2">.col-2</div>
+            </div>
+            <div class="row demo">
+                <div class="col-3">.col-3</div>
+            </div>
+            <div class="row demo">
+                <div class="col-4">.col-4</div>
+            </div>
+            <div class="row demo">    
+                <div class="col-5">.col-5</div>
+            </div>
+            <div class="row demo">
+                <div class="col-6">.col-6</div>
+            </div>
+            <div class="row demo">
+                <div class="col-7">.col-7</div>
+            </div>
+            <div class="row demo">
+                <div class="col-8">.col-8</div>
+            </div>
+            <div class="row demo">
+                <div class="col-9">.col-9</div>
+            </div>
+            <div class="row demo">
+                <div class="col-10">.col-10</div>
+            </div>
+            <div class="row demo">
+                <div class="col-11">.col-11</div>
+            </div>
+            <div class="row demo">
+                <div class="col-12">.col-12</div>
+            </div>
+        
+            <div class="row demo">
+                <div class="col-2 push 1">.push-1</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-2">.push-2</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-3">.push-3</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-4">.push-4</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-5">.push-5</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-6">.push-6</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-7">.push-7</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-8">.push-8</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-9">.push-9</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-10">.push-10</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-11">.push-11</div>
+            </div>
+            <div class="row demo">
+                <div class="col-2 push-12">.push-12</div>
+            </div>
+        
+            
+        
+            <pre><code>
+            &lt;div class="row"&gt;
+                &lt;div class="one-half"&gt;&amp;frac12;&lt;/div&gt;
+                &lt;div class="one-half"&gt;&amp;frac12;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="one-third"&gt;&amp;frac13;&lt;/div&gt;
+                &lt;div class="one-third"&gt;&amp;frac13;&lt;/div&gt;
+                &lt;div class="one-third"&gt;&amp;frac13;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="one-fourth"&gt;&amp;frac14;&lt;/div&gt;
+                &lt;div class="one-fourth"&gt;&amp;frac14;&lt;/div&gt;
+                &lt;div class="one-fourth"&gt;&amp;frac14;&lt;/div&gt;
+                &lt;div class="one-fourth"&gt;&amp;frac14;&lt;/div&gt;
+            &lt;/div&gt;
+            </code></pre>
+        
+            <div class="row">
+                <div class="one-half">
+                    <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
+                </div>
+                <div class="one-half">
+                    <h1>Image on the left, text on the right.</h1>
+                    <p>This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!</p>
+                </div>
+            </div>
+        
+            <pre><code>
+            &lt;div class="row"&gt;
+                &lt;div class="one-half"&gt;
+                    &lt;img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000"&gt;
+                &lt;/div&gt;
+                &lt;div class="one-half"&gt;
+                    &lt;h1&gt;Image on the left, text on the right.&lt;/h1&gt;
+                    &lt;p&gt;This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+        
+            <div class="row swapped">
+                <div class="one-half">
+                    <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
+                </div>
+                <div class="one-half">
+                    <h1>Text on the left, image on the right.</h1>
+                    <p>This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!</p>
+                </div>
+            </div>
+        
+            <pre><code>
+            &lt;div class="row swapped"&gt;
+                &lt;div class="one-half"&gt;
+                    &lt;img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000"&gt;
+                &lt;/div&gt;
+                &lt;div class="one-half"&gt;
+                    &lt;h1&gt;Text on the left, image on the right.&lt;/h1&gt;
+                    &lt;p&gt;This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+        
+            <div class="row">
+                <div class="one-half centered">
+                    <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
+                    <h1>A Centered Column</h1>
+                    <p>This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!</p>
+                </div>
+            </div>
+        
+            <pre><code>
+            &lt;div class="row"&gt;
+                &lt;div class="one-half centered"&gt;
+                    &lt;img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000"&gt;
+                    &lt;h1&gt;A Centered Column&lt;/h1&gt;
+                    &lt;p&gt;This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+        
+            <div class="row">
+                <div class="col-5 push-1">
+                    <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
+                    <h2>Col-5 Column</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore soluta rerum laboriosam. Quidem, eum voluptates.</p>
+                </div>
+                <div class="col-5">
+                    <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
+                    <h2>Col-5 Column</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore soluta rerum laboriosam. Quidem, eum voluptates.</p>
+                </div>
+            </div>
+        
+            <pre><code>
+            &lt;div class="row"&gt;
+                &lt;div class="col-5 push-1"&gt;
+                    &lt;img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000"&gt;
+                    &lt;h2&gt;Col-5 Column&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore soluta rerum laboriosam. Quidem, eum voluptates.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-5"&gt;
+                    &lt;img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000"&gt;
+                    &lt;h2&gt;Col-5 Column&lt;/h2&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore soluta rerum laboriosam. Quidem, eum voluptates.&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+        </div>
+    </section>
 
     
 
-    <pre><code>
-    &lt;div class="row"&gt;
-        &lt;div class="one-half"&gt;&amp;frac12;&lt;/div&gt;
-        &lt;div class="one-half"&gt;&amp;frac12;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="one-third"&gt;&amp;frac13;&lt;/div&gt;
-        &lt;div class="one-third"&gt;&amp;frac13;&lt;/div&gt;
-        &lt;div class="one-third"&gt;&amp;frac13;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="one-fourth"&gt;&amp;frac14;&lt;/div&gt;
-        &lt;div class="one-fourth"&gt;&amp;frac14;&lt;/div&gt;
-        &lt;div class="one-fourth"&gt;&amp;frac14;&lt;/div&gt;
-        &lt;div class="one-fourth"&gt;&amp;frac14;&lt;/div&gt;
-    &lt;/div&gt;
-    </code></pre>
+</main>
 
-    <div class="row">
-        <div class="one-half">
-            <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
-        </div>
-        <div class="one-half">
-            <h1>Image on the left, text on the right.</h1>
-            <p>This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!</p>
-        </div>
-    </div>
+<footer class="site-footer">
+    FOOTER GOES HERE
+</footer>
 
-    <div class="row swapped">
-        <div class="one-half">
-            <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
-        </div>
-        <div class="one-half">
-            <h1>Text on the left, image on the right.</h1>
-            <p>This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="one-half centered">
-            <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
-            <h1>A Centered Column</h1>
-            <p>This column is rendering via the default normal flow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi perferendis voluptas harum minus exercitationem!</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-5 push-1">
-            <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
-            <h2>Col-5 Column</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore soluta rerum laboriosam. Quidem, eum voluptates.</p>
-        </div>
-        <div class="col-5">
-            <img src="img/placeholder-2000x1000.gif" alt="placeholder" width="2000" height="1000">
-            <h2>Col-5 Column</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore soluta rerum laboriosam. Quidem, eum voluptates.</p>
-        </div>
-    </div>
-
-</div>
         <!--MAIN JS-->
         <script src="js/script.js"></script>
     
