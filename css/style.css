@@ -275,6 +275,11 @@ html {
 .site-header {
     background-color: var(--color-header-background);
     padding: var(--unit-s);
+
+    /* DISPLAY LOGO ON LEFT AND NAV ON RIGHT */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* LOGO STYLING */
@@ -287,6 +292,7 @@ html {
 .site-header .logo img{
     max-height: 60px;
     min-width: 60px;
+    vertical-align: middle;
 }
 
 .site-header .logo h1 {
@@ -296,6 +302,24 @@ html {
 
 .site-header .logo a{
     text-decoration: none;
+}
+
+/* SITE NAV */
+.site-header .site-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: var(--unit-s);
+}
+
+.site-header .site-nav a{
+    text-decoration: none;
+    font-weight: bold;
+    padding: .5em 1em;
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    color: var(--color-primary);
 }
 
 /* SITE MAIN */
@@ -310,6 +334,7 @@ section {
 
 .hero{
     background-color: var(--color-hero-background);
+    padding-block: var(--unit-xxl);
 }
 
 /* FOOTER */
@@ -317,6 +342,11 @@ section {
     background-color: var(--color-footer-background);
     padding: var(--unit-s);
 
+}
+
+/* REMOVE FOOTER PADDING IF IT HAS A CONTAINER */
+.site-footer:has(.container0){
+    padding-inline: 0;
 }
 
 /* UI COMPONENTS */
