@@ -156,6 +156,15 @@ img{
     text-align: center;
 }
 
+/* HIDE CONTENT VISUALLY (BUT KEEP FOR SEO AND ACCESSIBILITY) */
+.hide-visually,
+.visually-hidden,
+.screen-reader-only{
+    position:absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
 /* GLOBAL RESETS */
 
 /* Remove the default 8pm margin on body */
@@ -189,7 +198,8 @@ html {
     margin-block-end: var(--grid-gap);
 }
 
-@media (min-width: 768px) {
+/* NEW WIDTH SYNTAX */
+@media ( width >= 768px) {
     .row{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -265,6 +275,27 @@ html {
 .site-header {
     background-color: var(--color-header-background);
     padding: var(--unit-s);
+}
+
+/* LOGO STYLING */
+.site-header .logo{
+    display: flex;
+    align-items: center;
+    gap: var(--unit-s);
+}
+
+.site-header .logo img{
+    max-height: 60px;
+    min-width: 60px;
+}
+
+.site-header .logo h1 {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+.site-header .logo a{
+    text-decoration: none;
 }
 
 /* SITE MAIN */
