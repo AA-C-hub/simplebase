@@ -114,6 +114,12 @@ main {
 
 h1, h2, h3{
     color: var(--color-body-text-dark);
+    text-wrap: balance;
+}
+
+/* REMOVES WIDOWS */
+p{
+    text-wrap: pretty;
 }
 
 /* LINKS */
@@ -154,6 +160,12 @@ img{
 
 .text-center{
     text-align: center;
+}
+
+/* CENTER PARAGRAPHS INSIDE CENTERED PARENTS */
+.text-center p{
+    margin-inline: auto;
+    max-width: 600px;
 }
 
 /* HIDE CONTENT VISUALLY (BUT KEEP FOR SEO AND ACCESSIBILITY) */
@@ -337,7 +349,13 @@ section {
 .hero{
     background-color: var(--color-hero-background);
     padding-block: var(--unit-xxl);
+    padding-inline: var(--unit-s);
 }
+
+.hero:has(.container){
+    padding-inline: 0;
+}
+
 
 /* FOOTER */
 .site-footer{
@@ -394,3 +412,16 @@ body{
     grid-template-rows: auto 1fr auto;
     min-height: 100svh;
 }
+
+/* NUDGE THE NAV ITEMS DOWN TO ALIGN W IMAGE LOGO TEXT */
+.site-header .site-nav a{
+    padding-block-start: calc(var(--unit-xs) + .35em);
+}
+
+/* CUSTOM HERO STYLING */
+.hero h1{
+    font-size: 3em;
+    margin-block: 0;
+}
+
+
