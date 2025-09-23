@@ -192,6 +192,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ADD OFFSET TO ALL INLINE ANCHOR LINKS */
+:target {
+    scroll-margin-top: var(--unit-s);
+}
+
 /* LAYOUT */
 /* CONTAINER */
 .container{
@@ -422,4 +427,31 @@ body{
     margin-block: 0;
 }
 
+.hero p{
+    text-wrap: pretty;
+}
 
+/* CUSTOME PAGE LAYOUT - 2COLUMNS WITH AN ASIDE + MAIN CONTENT */
+
+@media ( width >= 768px) {
+   
+    .pagelayout-wrapper-twocolumn{
+        display: flex;
+        gap: var(--unit-l);
+    }
+
+    .pagesection-aside{
+        width: 25%
+    }
+
+    .pagesection-maincontent{
+        width: 75%
+    }
+
+}
+
+/* STICKYBOX */
+.stickybox{
+    position: sticky;
+    top: var(--unit-s);
+}
