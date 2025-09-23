@@ -330,10 +330,8 @@ html {
 .site-header .site-nav a{
     text-decoration: none;
     font-weight: bold;
-    padding: .5em 1em;
-    border-radius: var(--border-radius);
-    background-color: var(--color-white);
-    color: var(--color-primary);
+    padding: .5em;
+    color: var(--color-purple-900);
 }
 
 /* SITE MAIN */
