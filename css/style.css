@@ -280,6 +280,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* LOGO STYLING */
@@ -311,6 +312,7 @@ html {
     list-style: none;
     display: flex;
     gap: var(--unit-s);
+    flex-wrap: wrap;
 }
 
 .site-header .site-nav a{
