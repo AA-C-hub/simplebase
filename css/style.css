@@ -76,6 +76,10 @@ TABLE OF CONTENTS
     --color-secondary: var(--color-purple-400);
     --color-secondary-hover: var(--color-purple-900);
 
+    /* ACTION COLORS */
+    --color-links: var(--color-purple-100);
+    --color-links-hover: var(--color-purple-400);
+
     --color-hero-background: var(--color-pink-100);
     --color-header-background: var(--color-pink-400);
     --color-footer-background: var(--color-pink-400);
@@ -124,14 +128,14 @@ p{
 
 /* LINKS */
 a{
-    color: var(--color-secondary);
+    color: var(--color-links);
     text-decoration-color: var(--color-primary-dark);
     text-underline-offset: .2em;
     text-decoration-thickness: .05em;
 }
 
 a:hover{
-    color: var(--color-secondary-hover);
+    color: var(--color-links-hover);
 }
 
 /* GLOBAL TYPOGRAPHY */
@@ -390,6 +394,24 @@ section {
     height: 150px;
 }
 
+/* BUTTONS */
+.button{
+    background-color: var(--color-links);
+    color:#fff;
+    padding: var(--unit-s);
+    text-decoration: none;
+    display: inline-block;
+    margin-block: var(--unit-s);
+    border-radius: var(--border-radius);
+}
+
+.button:hover{
+    background-color: var(--color-links-hover);
+    color: var(--color-white);
+}
+
+
+
 /* HR */
 
 hr{
@@ -416,6 +438,11 @@ body{
     min-height: 100svh;
 }
 
+/* TO FIX OVERFLOW WORD BREAK */
+body > *{
+    min-width: 0;
+}
+
 /* NUDGE THE NAV ITEMS DOWN TO ALIGN W IMAGE LOGO TEXT */
 .site-header .site-nav a{
     padding-block-start: calc(var(--unit-xs) + .35em);
@@ -423,8 +450,10 @@ body{
 
 /* CUSTOM HERO STYLING */
 .hero h1{
-    font-size: 3em;
+    font-size: 4em;
+    font-size: clamp(2.5em, 5vw, 4em);
     margin-block: 0;
+    overflow-wrap: break-word;
 }
 
 .hero p{
