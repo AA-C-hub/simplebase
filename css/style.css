@@ -295,12 +295,13 @@ html {
 /* HEADER */
 .site-header {
     background-color: var(--color-header-background);
-    padding: var(--unit-s);
+    padding-block: var(--unit-s);
+    padding-inline: var(--unit-s);
 
     /* DISPLAY LOGO ON LEFT AND NAV ON RIGHT */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
 }
 
@@ -392,7 +393,8 @@ html {
         top: 0;
         width: 100%;
         height: 100%;
-        background: var(--color-purple-900);   
+        background: var(--color-purple-900);  
+        transition: all 0.3s ease-out; 
     }
     .site-nav[data-menustate] a {
         color: var(--color-white);
@@ -403,14 +405,47 @@ html {
     }
 
     .site-nav[data-menustate="closed"] ul {
-        translate: 0 -100%;
+        translate: 100% 0;
     }
-
+   
+    /* ENABLE SVG ANIMATION */
+    .site-nav[data-menustate] .simple-navicon rect {
+        transition:  all 0.3s ease-out;
+    }
+    /* CHANGE COLOR OF SVG NAV ICON WHEN MENU IS OPEN */
     .site-nav[data-menustate="open"] .simple-navicon rect {
         fill: var(--color-white);
     }
+    /* ANIMATE NAV ICON LINES TO AN X WHEN OPEN */
+    .site-nav .simple-navicon{
+        display: block;
+    }
+    .site-nav .simple-navicon rect{
+        transform-origin: center;
+        width: 100%;
+    }
+    
+    .site-nav[data-menustate="open"] .simple-navicon-top {
+        rotate: 45deg;
+        translate: -21% 24%;
+    }
+    .site-nav[data-menustate="open"] .simple-navicon-middle {
+        opacity: 0;
+    }
+    .site-nav[data-menustate="open"] .simple-navicon-bottom {
+        rotate: -45deg;
+        translate: -21% -24%;
+    }
     
 }
+
+/* REMOVE WIDE SCROLLBAR WHEN DRAWER IS CLOSED */
+/* .site-nav{
+    overflow-x: hidden;
+} */
+
+/* MOVE THE CLOSED STATE OF THE NAV TO FIX RESIZE BUG */
+
 
 /* SITE MAIN */
 .site-main {
@@ -549,7 +584,10 @@ body > *{
 }
 
 /* STICKYBOX */
-.stickybox{
-    position: sticky;
-    top: var(--unit-s);
+/* SET INSIDE OF A MEDIA QUERY SO IT ALLOWS THE OVERLAY MENU TO RENDER ON TOP OF SMALL SCREENS */
+@media ( width >= 768px) {
+    .stickybox{
+        position: sticky;
+        top: var(--unit-s);
+    }
 }
