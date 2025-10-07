@@ -414,7 +414,7 @@ html {
     }
     /* CHANGE COLOR OF SVG NAV ICON WHEN MENU IS OPEN */
     .site-nav[data-menustate="open"] .simple-navicon rect {
-        fill: var(--color-white);
+        all: var(--color-white);
     }
     /* ANIMATE NAV ICON LINES TO AN X WHEN OPEN */
     .site-nav .simple-navicon{
