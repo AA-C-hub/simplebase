@@ -10,12 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     menubutton.onclick = () => {
   
     // IF MENU IS CLOSED, OPEN IT, ELSE CLOSE IT
-    if (sitenav.getAttribute("data-menustate") === "closed") {
-    sitenav.setAttribute("data-menustate", "open");
-    } else {
+    if (sitenav.getAttribute("data-menustate") === "open") {
     sitenav.setAttribute("data-menustate", "closed");
+    } else {
+    sitenav.setAttribute("data-menustate", "open");
     };
-  
     };
+    //Remove the data-attriute on resize
+    window.onresize = () => {
+        sitenav.removeAttribute("data-menustate");
+    };
+
     
 });
