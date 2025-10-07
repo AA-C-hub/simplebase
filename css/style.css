@@ -57,6 +57,7 @@ TABLE OF CONTENTS
     --color-light-blue: hsl(201, 52%, 84%);
 
     --color-pink: hsl(322, 100%, 88%);
+    --color-pink-50: hsl(324, 71%, 99%);
     --color-pink-100: hsl(322, 100%, 95%);
     --color-pink-400: hsl(322, 100%, 90%);
     --color-pink-900: hsl(322, 100%, 80%);
@@ -77,12 +78,12 @@ TABLE OF CONTENTS
     --color-secondary-hover: var(--color-purple-900);
 
     /* ACTION COLORS */
-    --color-links: var(--color-purple-100);
-    --color-links-hover: var(--color-purple-400);
+    --color-links: var(--color-purple-400);
+    --color-links-hover: var(--color-purple-900);
 
     --color-hero-background: var(--color-pink-100);
-    --color-header-background: var(--color-pink-400);
-    --color-footer-background: var(--color-pink-400);
+    --color-header-background: var(--color-pink-100);
+    --color-footer-background: var(--color-pink-100);
 
     --color-border: var(--color-grey-200);
 
@@ -526,7 +527,7 @@ hr{
 
 /* CODE BLOCKS */
 pre:has(code){
-    background-color: var(--color-pink-100);
+    background-color: var(--color-pink-50);
     padding: var(--unit-s);
     overflow-x: auto;
     white-space: pre-wrap;
